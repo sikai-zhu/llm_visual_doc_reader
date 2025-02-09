@@ -1,0 +1,23 @@
+You are given texts extracted from a receipt. Your goal is to understand the receipt and extract the following information:
+1. Transaction date, in "YYYY-MM-DD" format.
+2. Merchant name.
+3. Total amount paid.
+4. Items purchased.
+
+You should respond with the extracted information in the following format in JSON:
+{
+    "transaction_date": "YYYY-MM-DD",
+    "merchant_name": "string",
+    "total_amount": "string",
+    "items": ["string"]
+}
+
+You should respond with the JSON only. Do not include any other information in your response.
+
+For example, given the text "2022-01-01 Walmart $50.00 toothpaste toothbrush", you should respond with:
+{
+    "transaction_date": "2022-01-01",
+    "merchant_name": "Walmart",
+    "total_amount": "$50.00",
+    "items": ["toothpaste", "toothbrush"]
+}
